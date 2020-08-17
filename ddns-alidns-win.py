@@ -110,7 +110,6 @@ def update_record(update_id, ip_addr):
 
 
 if __name__ == '__main__':
-    record_id = None
     expect_addr = get_expect_addr()
     print('get_expect_addr : %s' % expect_addr)
     record_addr = get_record_addr()
