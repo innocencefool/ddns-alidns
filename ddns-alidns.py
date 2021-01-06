@@ -94,7 +94,7 @@ def load_conf():
         if os.path.exists(DDNS_CONF):
             with open(DDNS_CONF, 'r') as ddns_conf:
                 dict_conf = json.load(ddns_conf)
-                if dict_conf.get('domain') is not None and dict_conf.get('domain') == SUBDOMAIN:
+                if dict_conf.get('subdomain') is not None and dict_conf.get('subdomain') == SUBDOMAIN:
                     return dict_conf.get('record_id')
     except Exception as e:
         logging.error(e)
@@ -102,7 +102,7 @@ def load_conf():
 
 def save_conf(record_id=None):
     try:
-        dict_conf = {'domain': SUBDOMAIN, 'record_id': record_id}
+        dict_conf = {'subdomain': SUBDOMAIN, 'record_id': record_id}
         with open(DDNS_CONF, 'w') as ddns_conf:
             json.dump(dict_conf, ddns_conf)
     except Exception as e:
