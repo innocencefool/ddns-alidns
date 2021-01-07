@@ -138,5 +138,5 @@ def main():
 
 
 if __name__ == '__main__':
-    logging.basicConfig(filename=DDNS_LOG, format="%(asctime)s - %(levelname)s - %(message)s", level=logging.INFO)
+    logging.basicConfig(filename=DDNS_LOG, format='%(asctime)s - %(levelname)s - %(message)s', level=logging.INFO)
     main()
