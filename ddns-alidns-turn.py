@@ -21,8 +21,8 @@ TURN = {'00:00:00': 'jp.alidns.com', '18:00:00': 'us.alidns.com'}
 
 SUBDOMAIN = '%s.%s' % (RECORD, DOMAIN)
 
-DDNS_CONF = 'ddns-alidns-turn.conf'
-DDNS_LOG = 'ddns-alidns-turn.log'
+DDNS_CONF = os.path.split(os.path.realpath(__file__))[0] + os.sep + 'ddns-alidns-turn.conf'
+DDNS_LOG = os.path.split(os.path.realpath(__file__))[0] + os.sep + 'ddns-alidns-turn.log'
 
 acsClient = AcsClient(ACCESSKEY_ID, ACCESSKEY_SECRET, 'cn-hangzhou')
 

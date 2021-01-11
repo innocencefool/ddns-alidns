@@ -20,8 +20,8 @@ RECORD = 'www'
 
 SUBDOMAIN = '%s.%s' % (RECORD, DOMAIN)
 
-DDNS_CONF = 'ddns-alidns.conf'
-DDNS_LOG = 'ddns-alidns.log'
+DDNS_CONF = os.path.split(os.path.realpath(__file__))[0] + os.sep + 'ddns-alidns.conf'
+DDNS_LOG = os.path.split(os.path.realpath(__file__))[0] + os.sep + 'ddns-alidns.log'
 
 acsClient = AcsClient(ACCESSKEY_ID, ACCESSKEY_SECRET, 'cn-hangzhou')
 
